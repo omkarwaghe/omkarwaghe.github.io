@@ -85,7 +85,12 @@ CallAppEngine("APP_ENG", &stateRec);</br>
     Syntax - %TruncateTable(table name)
     <li><b>%Select</b> - use to pass the variables to the state records
     <b>%select</b> and <b>%selectinit</b> are same when they are retrivng values.when it comes to %select when it is not retriving values the previous values in the state record will be unchanged.when it comes to %selectinit when it is not retriving values the previous values in the state record will be changed to Null.
-    </li></li>
+    </li>
+    <li><b>%COALESCE</b> - use this function to return non-null argument provided to the function</br>
+    The NULL values are replaced with the user-given value during the expression value evaluation process</br>
+    
+    </li>
+  </li>
   </ul>
   </p>
     
