@@ -57,6 +57,11 @@ Specify the commit level for the step:
     <p><b>Meta-SQL and PeopleCode</b></br>
   <ul><li>%UpdateStats - use this construct to generate platform specific SQL statement that update the system catalog tables used by database optimizer in choosing optimal query plans</br>
   Use this construct after your program has inserted large amounts of data into a temporary table that will be deleted before the end of the program run. This construct saves you from having to use dummy seed data for the temporary table and having to update statistics manually.
-  </li></ul></p>
+  <br> Syntax %UpdateStats(<i>Tablename</i>, [HIGH/LOW])</li>
+    <li>%Truncate - truncates an expression to a specified scale before or after the decimal point.<br>
+    Syntax - %Truncate(<i>table name</i>)</li>
+  </ul>
+  </p>
+    
   </body>
 </html>
