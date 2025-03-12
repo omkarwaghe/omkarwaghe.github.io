@@ -88,8 +88,11 @@ CallAppEngine("APP_ENG", &stateRec);</br>
     </li>
     <li><b>%COALESCE</b> - use this function to return non-null argument provided to the function</br>
     The NULL values are replaced with the user-given value during the expression value evaluation process</br>
-    
     </li>
+    <li><b>%CurrentDateTimeIn and %CurrentDateTimeOut </b> are the case where TimeIn are used in SQL with where clause select,update,insert statement</li>
+    <li><b>%DateIn</b> - wherever date literal or date bind variable is used in a comparison in the Where clause of a select or update or insert statement</br>
+    in COBOL you can only use String literal.
+  </li>
   </li>
   </ul>
   </p>
