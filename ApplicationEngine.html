@@ -1,10 +1,10 @@
 <html>
-  <header>Application Engine</header>
-  <body><b>Types</b>
-  </br><ol><li>Standard</li><li>Upgrade</li><li>Import</li><li>Daemon - It suns continously when Peoplesoft Process scheduler is running and is intended for recurring jobs
+  <header><b>Application Engine</b></header>
+  <body><b>Application Engine Types</b>
+    <ol><li>Standard</li><li>Upgrade</li><li>Import</li><li>Daemon - It runs continously when Peoplesoft Process scheduler is running and is intended for recurring jobs
   <br>One PSDAEMON process can run for each row in the PS_SERVERDEFN table. The PS_SERVERDEFN.DAEMONENABLED field must be set to 1.
-  <br> Start Daemon process from PeopleTools>Process Scheduler>Daemon Group
-  <br></li><li>Transform</li></ol>
+  <br> Start Daemon process from PeopleTools>Process Scheduler>Daemon Group</li>
+      <li>Transform</li></ol>
   </br>Parts of application Engine are <ol><li>Section</li><li>Step</li><li>Actions</li></ol> 
   <p>App engine properties</br></p>
   <ol><li>Disable restart</br>select to disable built-in restart capabilities for program</li>
@@ -23,14 +23,14 @@
         <li>Access - if set to public the section can be accessed by another program</li>
       </ol>
     </p>
-    <p>Step</p>
+    <p><b>Step</b></p>
     </br>Step is the smallest unit of work that can be commited in the program.
-    <br> Imp Step properties
+    <br>Important Step properties
     <ul><li> Commit -
 Specify the commit level for the step:
 <ul><li>Default: Select to inherit whatever commit level you specified for the section in which the step resides.</li>
 <li>Later: Select to postpone the commit until a subsequent commit occurs. Here you can override the section-level commit if it is set to After Step.</li>
-<li>After Step: Select if you have a commit level of None specified at the section level. This selection enables you to override the section-level commit and commit a specific step within a section with no other commits.</li>
+<li>After Step: Select if you have a commit level of None specified at the section level.<br>This selection enables you to override the section-level commit and commit a specific step within a section with no other commits.</li>
 </ul>
     </li>
       <li>Frequency - Enabled only when a step contains Do While, Do Select or Do Until. </br>Enter the numeric frequency at which App engine should commit</li>
@@ -43,7 +43,7 @@ Specify the commit level for the step:
     <ul>
   <li>Do Actions
   </br><ul><li>Do When</li><li>Do While</li><Li>Do Select</li><li>Do Until</li></ul></li>
-  <li></br>SQL</br><ul><li>Update</li><li>Delete</li><li>Insert</li><li>Select</li></ul></li>
+  <li>SQL<ul><li>Update</li><li>Delete</li><li>Insert</li><li>Select</li></ul></li>
   <li>PeopleCode</li>
   <li>Call Section</li>    
       </ul>
