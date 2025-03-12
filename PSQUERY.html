@@ -1,0 +1,31 @@
+<html>
+  <header>
+    PSQUERY and BI Publisher
+  </header>
+  <body>
+    <p>
+      <b>Uses</b></br><ol><li>To Schedule Queries</li><li>To Download Query results</li><li>peoplesoft workflow to determine whome to send emails,forms, work entries</li>
+      <li>to Create Data Source for Peoplesoft Nvision Report</li><li>Data Source for BI Publisher</li><li>Data Source for Pivot Grid models</li></ol>
+    </p>
+    <p>
+      <b>Peoplesoft Query business process flow</b>
+      Select Record -> Add Fields to query Content -> Create Expression(optional) -> Create Prompts(optional) -> Define selection criteria(optional) -> Define having criteria(optional) -> Run query(optional)
+      <b>Query Impplementation</b>
+      </br><ol><li>Define query profiles</li><li>build query access group trees</li><li>work with query trees</li><li>Define row level security and query security records</li></ol>
+    </p>
+    <p><b>row level security</b></br>With row-level security, users can have access to a table without having access to all rows on that table
+  </br> to apply row level security you can add view with SQL condition in record properties of the record which you want to apply row level security
+  </br>To implement row-level security through a security view:
+
+  </br>In Application Designer, insert one of the three row-level security fields (OPRID, OPRCLASS, ROWSECCLASS) into the record definition.
+
+  </br>Configure the field as a Key, but not a List Box Item.
+
+  </br>Save the record and build the view.
+
+  </br>Use the record as the search record or query security record.
+
+  </br>Now, when the user searches, the system dynamically adds a WHERE clause — that incorporates the security field — to the search SELECT statement. The value of the security field is based on the current user.
+  </p>
+  </body>
+</html>
