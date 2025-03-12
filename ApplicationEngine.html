@@ -39,10 +39,13 @@ Specify the commit level for the step:
       <li> Status - Set to activate step</li>
     </ul>
     </p> 
-    <p>Actions</p>
+    <p><b>Actions</b></p>
     <ul>
   <li>Do Actions
-  </br><ul><li>Do When</li><li>Do While</li><Li>Do Select</li><li>Do Until</li></ul></li>
+  </br><ul><li>Do When - A Do When statement runs before any other actions in a step. If the Do When statement returns any rows, the next action is executed. 
+  </br>If the Do When conditions are not met, the remaining actions within that step are not executed</li><li>Do While -  runs before subsequent actions of the step. If the Do While statement does not return any rows of data, the action terminates. The Do While statement is identical to the COBOL While statement. 
+  </br>Subsequent actions within the step are executed in a loop as long as at least one row is returned by the Select statement for the Do While action. If the Do While statement does not return any rows, the step is complete.</li><Li>Do Select -a Do Select statement can run a SQL statement for each row returned from the Select statement. The subsequent actions within the step are executed in a loop based on the results of the Select statement. The type of the Do Select determines the specific looping rules.</li><li>Do Until - A Do Until action is a Select statement that runs after each action when a step completes
+  </br>You use a Do Until action if you want the processing actions to execute at least once and to execute repeatedly until a certain condition is true, such as a Select statement returns some rows</li></ul></li>
   <li>SQL<ul><li>Update</li><li>Delete</li><li>Insert</li><li>Select</li></ul></li>
   <li>PeopleCode</li>
   <li>Call Section</li>    
