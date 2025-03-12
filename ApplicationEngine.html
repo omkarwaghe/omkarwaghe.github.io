@@ -77,13 +77,13 @@ CallAppEngine("APP_ENG", &stateRec);</br>
     <p><b>Meta-SQL and PeopleCode</b></br>
   <ul><li><b>%UpdateStats</b> - use this construct to generate platform specific SQL statement that update the system catalog tables used by database optimizer in choosing optimal query plans</br>
   Use this construct after your program has inserted large amounts of data into a temporary table that will be deleted before the end of the program run. This construct saves you from having to use dummy seed data for the temporary table and having to update statistics manually.
-  <br> Syntax %UpdateStats(<i>Tablename</i>, [HIGH/LOW])</li>
+  <br> Syntax %UpdateStats(<i>Tablename</i>, [HIGH/LOW])</br></li>
     <li><b>%Truncate</b> - truncates an expression to a specified scale before or after the decimal point.<br>
     Syntax - %Truncate(<i>table name</i>)
     Example - %Truncate(10.337, 2) = 10.33, %Truncate(19.337, -1) = 10</li></br>
     <li><b>%TruncateTable</b> - Use the %TruncateTable construct to invoke a bulk delete command on a table. It perform Implicit commit and This construct is functionally identical to a Delete SQL statement with no Where clause, but it is faster on databases that support bulk deletes. </br>
-    Syntax - %TruncateTable(table name)</br>
-    <li><b>%Select</b> - use to pass the variables to the state records</br>
+    Syntax - %TruncateTable(table name)</br></li>
+    <li><b>%Select</b> - use to pass the variables to the state records</br></li>
     <b>%select</b> and <b>%selectinit</b> are same when they are retrivng values.when it comes to %select when it is not retriving values the previous values in the state record will be unchanged.when it comes to %selectinit when it is not retriving values the previous values in the state record will be changed to Null.</br>
     </li>
     <li><b>%COALESCE</b> - use this function to return non-null argument provided to the function</br>
@@ -92,7 +92,6 @@ CallAppEngine("APP_ENG", &stateRec);</br>
     <li><b>%CurrentDateTimeIn and %CurrentDateTimeOut </b> are the case where TimeIn are used in SQL with where clause select,update,insert statement</br></li>
     <li><b>%DateIn</b> - wherever date literal or date bind variable is used in a comparison in the Where clause of a select or update or insert statement</br>
     in COBOL you can only use String literal.</br>
-  </li>
   </li>
   </ul>
   </p>
