@@ -1,7 +1,25 @@
 <html>
   <header>Application Engine</header>
   <body><b>Types</b>
-  </br><ol><li>Standard</li><li>upgrade</li><li>demon></li></ol>
-  <br>Parts of application Engine are <ol>Section<li>Step</li><li>Actions</li></ol> 
+  </br><ol><li>Standard</li><li>Upgrade</li><li>Import</li><li>Daemon></li><li>Transform</li></ol>
+  </br>Parts of application Engine are <ol>Section<li>Step</li><li>Actions</li></ol> 
+  <p>App engine properties</br></p>
+  <ol><li>Disable restart</br>select to disable built-in restart capabilities for program</li>
+  <li>Application Library</br>delcare some program to contain only a collection or library</li>
+  </ol>
+  <p>
+    <b>Section</b></br>
+    MAIN section identifies the entry point of the program.
+    <p><b>Important Section Properties</b>
+      <ol><li>Market- select the market for which the section is intended</li>
+      <li>Platform - select the target database for which this section definition will run</li>
+      <li>Effective Date</li><li>Effective status</li><li>Section type - If the program terminate abnormally,
+        this value specifies if you want to restart the program or not</br> If a section controls a procedure that, if not run to completion, 
+        could corrupt or desynchronize your data, then select Critical Updates. Otherwise, accept the default value of Prepare Only.</li>
+        <li>Auto commit - no commit or commit after step is completed in the section</li>
+        <li>Access - if set to public the section can be accessed by another program</li>
+      </ol>
+    </p>
+    </p>  
   </body>
 </html>
