@@ -16,6 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
             title: "PeopleSoft Architecture",
             content: "Browser <-> Web Server <-> Application Server -> process Scheduler services -> RDBMS"
         },
+        {
+            title: "PS Query",
+            content: '<a href="PSQUERY.html">Read more</a>',
+        },
     ];
 
     const blogPostsContainer = document.getElementById("blog-posts");
