@@ -1,6 +1,6 @@
 <html>
   <header>
-    PSQUERY and BI Publisher
+    <b>PSQUERY and BI Publisher</b>
   </header>
   <body>
     <p>
@@ -10,11 +10,12 @@
     <p>
       <b>Peoplesoft Query business process flow</b>
       Select Record -> Add Fields to query Content -> Create Expression(optional) -> Create Prompts(optional) -> Define selection criteria(optional) -> Define having criteria(optional) -> Run query(optional)
-      <b>Query Impplementation</b>
+      <br><b>Query Implementation</b>
       </br><ol><li>Define query profiles</li><li>build query access group trees</li><li>work with query trees</li><li>Define row level security and query security records</li></ol>
     </p>
     <p><b>row level security</b></br>With row-level security, users can have access to a table without having access to all rows on that table
   </br> to apply row level security you can add view with SQL condition in record properties of the record which you want to apply row level security
+  <p>
   </br>To implement row-level security through a security view:
 
   </br>In Application Designer, insert one of the three row-level security fields (OPRID, OPRCLASS, ROWSECCLASS) into the record definition.
@@ -27,5 +28,7 @@
 
   </br>Now, when the user searches, the system dynamically adds a WHERE clause — that incorporates the security field — to the search SELECT statement. The value of the security field is based on the current user.
   </p>
+    <p><b>Query Access Group</b></br> Every record definition that you want users to be able to query must be in a query tree.</p>
+    </p>
   </body>
 </html>
