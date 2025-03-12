@@ -70,6 +70,10 @@ CallAppEngine("APP_ENG", &stateRec);</br>
     <b>State Records of Called Programs</b><br>
       When you call a program from another program, the default state record of the called program becomes active until processing returns to the initial program. However, all of the state records associated with both programs are available. State records that are common between the two programs share values. To communicate between the two programs or share %BIND variables, define the same state records in both programs.
       </p>
+    <p>
+      <b>Using CallAppEngine</b></br>
+      Many App Engine programs are developed under the assumption that a run control record is populated in advance, and that the AE will only be run via the Process Scheduler. Therefore, you may need to firstly check the App Engine to see what its requirements are in terms of run control records. If a run control record is needed, a better option would be to create the run control record and then schedule an App Engine process via ‘CreateProcessRequest’ 
+    </p>
     <p><b>Meta-SQL and PeopleCode</b></br>
   <ul><li>%UpdateStats - use this construct to generate platform specific SQL statement that update the system catalog tables used by database optimizer in choosing optimal query plans</br>
   Use this construct after your program has inserted large amounts of data into a temporary table that will be deleted before the end of the program run. This construct saves you from having to use dummy seed data for the temporary table and having to update statistics manually.
