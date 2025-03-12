@@ -75,16 +75,16 @@ CallAppEngine("APP_ENG", &stateRec);</br>
       Many App Engine programs are developed under the assumption that a run control record is populated in advance, and that the AE will only be run via the Process Scheduler. Therefore, you may need to firstly check the App Engine to see what its requirements are in terms of run control records. If a run control record is needed, a better option would be to create the run control record and then schedule an App Engine process via ‘CreateProcessRequest’ 
     </p>
     <p><b>Meta-SQL and PeopleCode</b></br>
-  <ul><li>%UpdateStats - use this construct to generate platform specific SQL statement that update the system catalog tables used by database optimizer in choosing optimal query plans</br>
+  <ul><li><b>%UpdateStats</b> - use this construct to generate platform specific SQL statement that update the system catalog tables used by database optimizer in choosing optimal query plans</br>
   Use this construct after your program has inserted large amounts of data into a temporary table that will be deleted before the end of the program run. This construct saves you from having to use dummy seed data for the temporary table and having to update statistics manually.
   <br> Syntax %UpdateStats(<i>Tablename</i>, [HIGH/LOW])</li>
-    <li>%Truncate - truncates an expression to a specified scale before or after the decimal point.<br>
+    <li><b>%Truncate</b> - truncates an expression to a specified scale before or after the decimal point.<br>
     Syntax - %Truncate(<i>table name</i>)
     Example - %Truncate(10.337, 2) = 10.33, %Truncate(19.337, -1) = 10</li>
-    <li>%TruncateTable - Use the %TruncateTable construct to invoke a bulk delete command on a table. It perform Implicit commit and This construct is functionally identical to a Delete SQL statement with no Where clause, but it is faster on databases that support bulk deletes. </br>
+    <li><b>%TruncateTable</b> - Use the %TruncateTable construct to invoke a bulk delete command on a table. It perform Implicit commit and This construct is functionally identical to a Delete SQL statement with no Where clause, but it is faster on databases that support bulk deletes. </br>
     Syntax - %TruncateTable(table name)
-    <li>%Select - use to pass the variables to the state records
-    %select and %selectinit are same when they are retrivng values.when it comes to %select when it is not retriving values the previous values in the state record will be unchanged.when it comes to %selectinit when it is not retriving values the previous values in the state record will be changed to Null.
+    <li><b>%Select</b> - use to pass the variables to the state records
+    <b>%select</b> and <b>%selectinit</b> are same when they are retrivng values.when it comes to %select when it is not retriving values the previous values in the state record will be unchanged.when it comes to %selectinit when it is not retriving values the previous values in the state record will be changed to Null.
     </li></li>
   </ul>
   </p>
