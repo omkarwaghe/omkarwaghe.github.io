@@ -1,6 +1,16 @@
 <html>
-<ul>Synchronous</ul>
-<ul>Asynchronous</ul>
+<ul>Integration Broker Architecture</ul>
+  <p>Integration broker consist of two subsystems 1.Integration Gateway 2.Integration Engine<br>
+    Integration Gatway resides in web server and Integration engine in App server<br>
+  Peoplesoft Integration enable us to provide web services by generating Web Service Description Language(WSDL) and Web Application Definition Language(WADL) <br>
+  <b>Integration Gateway Architecture</b>
+    Listening connectors recieve incoming messages and deliver the incoming request to the gateway manager
+    <br> gateway Manager determine which target connectors to use to properly deliver the messages to thier intended recipients.
+    <br><b>HTTP Listening connector</b><br>The URL for the HTTP listening connector is http://gatewayserver/PSIGW/HttpListeningConnector, 
+    where gatewayserver is the machine name and port, host name, or IP address of the web server hosting the gateway.
+  </p>
+  
+  <ul>Asynchronous</ul>
 
   import PS_PT:Integration:IRequestHandler;
 </html>
