@@ -51,6 +51,22 @@ Specify the commit level for the step:
   <li>Call Section</li>    
       </ul>
     <p>
+      <b>Using CallAppEngine</b></br>
+       you may need to firstly check the App Engine to see what its requirements are in terms of run control records. If a run control record is needed, a better option would be to create the run control record and then schedule an App Engine process via ‘CreateProcessRequest’</br>
+      If the App Engine does have the ability to be run immediately as part of online PeopleCode, you also need to consider what database tables must be populated in advance. If, for instance, the user is mid-way through processing data on a component, you will need to consider the most appropriate place to call the App Engine. You may have to perform an early ‘DoSave()’ before continuing with ‘CallAppEngine’. Therefore, a likely event to include a ‘CallAppEngine’ statement would be ‘FieldChange’ or ‘SavePostChange’</br>
+    <p>
+      /* Set the state record for the App Engine */</br>
+Local Record &stateRec;</br>
+ 
+&stateRec = CreateRecord(Record.STATE_REC_AET);</br>
+&stateRec.EMPLID.Value = ¤tEmplID;</br>
+&stateRec.ITEM_TYPE.Value = ¤tItemType;</br>
+ 
+CallAppEngine("APP_ENG", &stateRec);</br>
+    </p>
+         
+  </p>
+    <p>
     <b>State Records of Called Programs</b><br>
       When you call a program from another program, the default state record of the called program becomes active until processing returns to the initial program. However, all of the state records associated with both programs are available. State records that are common between the two programs share values. To communicate between the two programs or share %BIND variables, define the same state records in both programs.
       </p>
@@ -59,7 +75,13 @@ Specify the commit level for the step:
   Use this construct after your program has inserted large amounts of data into a temporary table that will be deleted before the end of the program run. This construct saves you from having to use dummy seed data for the temporary table and having to update statistics manually.
   <br> Syntax %UpdateStats(<i>Tablename</i>, [HIGH/LOW])</li>
     <li>%Truncate - truncates an expression to a specified scale before or after the decimal point.<br>
-    Syntax - %Truncate(<i>table name</i>)</li>
+    Syntax - %Truncate(<i>table name</i>)
+    Example - %Truncate(10.337, 2) = 10.33, %Truncate(19.337, -1) = 10</li>
+    <li>%TruncateTable - Use the %TruncateTable construct to invoke a bulk delete command on a table. It perform Implicit commit and This construct is functionally identical to a Delete SQL statement with no Where clause, but it is faster on databases that support bulk deletes. </br>
+    Syntax - %TruncateTable(table name)
+    <li>%Select - use to pass the variables to the state records
+    %select and %selectinit are same when they are retrivng values.when it comes to %select when it is not retriving values the previous values in the state record will be unchanged.when it comes to %selectinit when it is not retriving values the previous values in the state record will be changed to Null.
+    </li></li>
   </ul>
   </p>
     
