@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
             content: "Component Interface functions",
         },
         {
-            title: "Peoplecode Development",
-            content: "Learnings",
+            title: "PeopleSoft Modules",
+            content: '<a href="PSMODULES.html">Read more</a>',
         },
         {
             title: "PeopleSoft Architecture",
