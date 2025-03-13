@@ -22,6 +22,7 @@ table tr {
      PeopleSoft Component processer flow event
       <a href="https://peoplesoftcomponentprocessorflowchart.blogspot.com/">Detailed flow chart of component processor flow</a>
     <a href="https://www.zutshigroup.com/PSOL/pt846/eng/psbooks/tpcd/chapter.htm?File=tpcd/htm/tpcd07.htm"> zutshigroup</a>
+        <a href="https://docs.oracle.com/cd/F44947_01/pt858pbr3/eng/pt/tpcd/task_PeopleCodeProgramTriggers-074ad5.html">Event Flow</a>
       <p>
         Based on the Peoplesoft functionality we have certain peoplecode event which will be triggered when component will be loaded.
         <table>
@@ -38,38 +39,48 @@ table tr {
               <td>
                 <table>
                   <tr><td><b>SearchInit</b> - Performs before the search dialogue box displays</td></tr>
-                  <tr><td><b>SearchSave</b></td></tr>
                   <tr><td>PreBuild</td></tr>
                   <tr><td>FieldDefault</td></tr>
                   <tr><td>FieldFormula</td></tr>
                   <tr><td><b>FieldEdit</b> - Validation, until it does not get rectify component will not save</td></tr>
                   <tr><td><b>FieldChange</b> - its for recalculating field values based on changes made to other fields</td></tr>
                   <tr><td><b>Prepopup</b></td></tr>
-                <tr><td><b>Workflow</b></td></tr>
+                  <tr><td><b>RowInit</b></td></tr>
+                  <tr><td><b>RowDelete</b></td></tr>
+                  <tr><td><b>RowInsert</b></td></tr>
+                  <tr><td><b>RowSelect</b></td></tr>
+                  <tr><td><b>SaveEdit</b></td></tr>
+                  <tr><td><b>SavePreChg</b></td></tr>
+                 <tr><td><b>Workflow</b></td></tr>
+                  <tr><td><b>SavePostChange</b></td></tr>
                 </table>
               </td>
               <td>  
-              <table>
-                <tr><td>FieldChange</td></tr>
+                <table>
                 <tr><td>FieldDefault</td></tr>
                 <tr><td>FieldEdit</td></tr>
-                <tr><td>FieldEdit</td></tr>
+                <tr><td>FieldChange</td></tr>
                 <tr><td>PrePopup</td></tr>
-              </table>
+                </table>
         </td> 
                 <td>
-                <table>
+                    <table>
                 <tr><td>SearchInit</td></tr>
-                <tr><td>SearchSave</td></tr>
-                <tr><td>RowInit</td></tr>
+                  <tr><td>SearchSave</td></tr>
+                  <tr><td>RowInit</td></tr>
                 <tr><td>RowSelect</td></tr>
                 <tr><td>RowInsert</td></tr>
+                <tr><td>RowDelete</td></tr>
+                <tr><td>SaveEdit</td></tr>
+                <tr><td>SavePreChange</td></tr>
                 <tr><td>SavePostChange</td></tr>
-                </table>
-                    </td>
+              </table>                    
+                   </td>
                 <td>
-                    <table>
+                    <table><tr><td>PreBulid</td></tr>
+                        <tr><td>PostBuild</td></tr>   
                         <tr><td>SavePreChange</td></tr>
+                        <tr><td>WorkFlow</td></tr>
                         <tr><td>SavePostChange</td></tr>    
                     </table>
                 </td>   
