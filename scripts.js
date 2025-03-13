@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
             content: '<a href="ApplicationEngine.html">Read more</a>',
         },
         {
+            title: "PeopleCode Event",
+            content: '<a href="PeopleCode.html">Read more</a>',
+        },
+        {
             title: "Integration Broker",
             content: 'Synchronous and Asynchronous method <br> <a href="IntegrationBroker.html">Read more</a>',
         },
