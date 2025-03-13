@@ -58,3 +58,11 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+table {
+    border-collapse:collapse;
+}
+
+table td {
+   border:1px solid #000;
+}
