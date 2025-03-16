@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             title: "Component Interface",
-            content: "Component Interface functions",
+            content: '<a href="CI.html">Read more</a>',
         },
         {
             title: "PeopleSoft Modules",
