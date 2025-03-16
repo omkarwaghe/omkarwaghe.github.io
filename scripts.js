@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             title: "Integration Broker",
-            content: 'Synchronous and Asynchronous method <br> <a href="IntegrationBroker.html">Read more</a>',
+            content: '<a href="IntegrationBroker.html">Read more</a>',
         },
         {
             title: "Component Interface",
