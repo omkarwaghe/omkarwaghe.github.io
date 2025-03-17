@@ -32,6 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
             title: "PS Query",
             content: '<a href="PSQUERY.html">Read more</a>',
         },
+        {
+            title: "Reference Links",
+            content: '<a href="PSLinks.html">Read more</a>',
+        },
          {
             title: "Interview Questions",
             content: '<a href="PSInterviewQuestions.html">Read more</a>',
@@ -45,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const postElement = document.createElement("div");
         postElement.className = "post";
         postElement.innerHTML = `
-            <h2>${post.title}</h2>
+            <h3>${post.title}</h3>
             <p>${post.content}</p>
         `;
         blogPostsContainer.appendChild(postElement);
