@@ -32,6 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
             title: "PS Query",
             content: '<a href="PSQUERY.html">Read more</a>',
         },
+         {
+            title: "Interview Questions",
+            content: '<a href="PSInterviewQuestions.html">Read more</a>',
+        },
+        
     ];
 
     const blogPostsContainer = document.getElementById("blog-posts");
