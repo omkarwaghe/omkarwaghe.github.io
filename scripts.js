@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
     const blogPosts = [
+        {
+            title: "App Designer Overview",
+            content: '<a href="Appdesigneroverview.html">Read more</a>',
+        },
          {
             title: "Application Engine",
             content: '<a href="ApplicationEngine.html">Read more</a>',
