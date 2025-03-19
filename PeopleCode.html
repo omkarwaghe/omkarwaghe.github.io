@@ -39,7 +39,7 @@ table tr {
               <td>
                 <table>
                   <tr><td><b>SearchInit</b> - Triggered before the search dialogue box displays</td></tr>
-                  <tr><td><b>PreBuild</b> - Triggered before the component build, used to hide unhide pages or used to set component variable</td></tr>
+                  <tr><td><b>PreBuild</b> </td></tr>
                   <tr><td><b>FieldDefault</b></td></tr>
                   <tr><td><b>FieldFormula</b> - (it should not be used because) it initiates in many different contexts and triggers PeopleCode on every row in component buffer.</td></tr>
                   <tr><td><b>FieldEdit</b></td></tr>
@@ -50,7 +50,7 @@ table tr {
                   <tr><td><b>RowDelete</b> - The RowDelete event is initiated whenever a user attempts to delete a row of data from a page scroll area</td></tr>
                   <tr><td><b>RowInsert</b> - When a user adds a row of data, the Component Processor generates a RowInsert event</td></tr>         
                   <tr><td><b>SaveEdit</b> - Validation before save, recordA->recordB->ComponentRecordA->ComponentRecordB</td></tr>
-                  <tr><td><b>SavePreChange</b> - SavePreChange PeopleCode provides one final opportunity to manipulate data before the system updates the database</td></tr>
+                  <tr><td><b>SavePreChange</b></td></tr>
                  <tr><td><b>Workflow</b> - The Workflow event segregates PeopleCode related to workflow from the rest of the application’s PeopleCode</td></tr>
                   <tr><td><b>SavePostChange</b> - The system issues a SQL Commit statement after SavePostChange PeopleCode completes successfully</td></tr>
                 </table>
@@ -77,9 +77,9 @@ table tr {
               </table>                    
                    </td>
                 <td>
-                    <table><tr><td>PreBulid</td></tr>
-                        <tr><td>PostBuild</td></tr>   
-                        <tr><td>SavePreChange</td></tr>
+                    <table><tr><td><b>PreBulid</b> - Triggered before the component build, used to hide unhide pages or used to set component variable</td></tr>
+                        <tr><td><b>PostBuild</b> - The PostBuild event is initiated after all the other component build events have been initiated. This event is often used to hide or unhide pages</td></tr>   
+                        <tr><td><b>SavePreChange</b> - SavePreChange PeopleCode provides one final opportunity to manipulate data before the system updates the database</td></tr>
                         <tr><td>WorkFlow</td></tr>
                         <tr><td>SavePostChange</td></tr>    
                     </table>
