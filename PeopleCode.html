@@ -40,11 +40,11 @@ table tr {
                 <table>
                   <tr><td><b>SearchInit</b> - Triggered before the search dialogue box displays</td></tr>
                   <tr><td><b>PreBuild</b> - Triggered before the component build, used to hide unhide pages or used to set component variable</td></tr>
-                  <tr><td><b>FieldDefault</b> - Enables to set fields to default values when they are initially displayed. In add mode when the new row is inserted into a scroll area.</td></tr>
+                  <tr><td><b>FieldDefault</b></td></tr>
                   <tr><td><b>FieldFormula</b> - (it should not be used because) it initiates in many different contexts and triggers PeopleCode on every row in component buffer.</td></tr>
-                  <tr><td><b>FieldEdit</b> - used for Validation, until it does not get rectify component will not save</td></tr>
-                  <tr><td><b>FieldChange</b> - its for recalculating field values based on changes made to other fields.</br>RecordA->ComponentRecordA->recordB->ComponentRecordB</td></tr>
-                  <tr><td><b>Prepopup</b> - Initiated just before the pop-up menu. used to control appearance of pop-up menu</td></tr>
+                  <tr><td><b>FieldEdit</b></td></tr>
+                  <tr><td><b>FieldChange</b> - code Flow - </br>RecordA->ComponentRecordA->recordB->ComponentRecordB</td></tr>
+                  <tr><td><b>Prepopup</b> </td></tr>
                   <tr><td><b>RowInit</b> - The RowInit event is initiated the first time that the Component Processor encounters a row of data</td></tr>
                   <tr><td><b>RowSelect</b> - RowSelect PeopleCode is used to filter out rows of data as they are being read into the component buffer.</td></tr>
                   <tr><td><b>RowDelete</b> - The RowDelete event is initiated whenever a user attempts to delete a row of data from a page scroll area</td></tr>
@@ -57,10 +57,10 @@ table tr {
               </td>
               <td>  
                 <table>
-                <tr><td>FieldDefault</td></tr>
-                <tr><td>FieldEdit</td></tr>
-                <tr><td>FieldChange</td></tr>
-                <tr><td>PrePopup</td></tr>
+                <tr><td><b>FieldDefault</b> - Enables to set fields to default values when they are initially displayed. In add mode when the new row is inserted into a scroll area.</td></tr>
+                <tr><td><b>FieldEdit</b> - used for Validation, until it does not get rectify component will not save</td></tr>
+                <tr><td><b>FieldChange</b> - its for recalculating field values based on changes made to other fields.</td></tr>
+                <tr><td><b>PrePopup</b> - Initiated just before the pop-up menu. used to control appearance of pop-up menu</td></tr>
                 </table>
         </td> 
                 <td>
