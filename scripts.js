@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
             content: '<a href="PSArchitecture.html">Read more</a>',
         },
         {
-            title: "PS Query",
+            title: "PS Query & BI Publisher",
             content: '<a href="PSQUERY.html">Read more</a>',
         },
         {
