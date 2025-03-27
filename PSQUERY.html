@@ -7,41 +7,44 @@
     <b>BI report publisher with SQL Query</b></br>
       <a href="https://www.psoftsearch.com/xml-bi-publisher-tutorial/"> Click here for more details</a>
 <p>
-</br>Step-by-Step Guide
-</br>reate Data Source in Application Engine:
-
-</br>Develop an Application Engine program to extract data from the PeopleSoft database.
-</br>Use SQL or PeopleCode to fetch the required data and store it in a temporary table or a state record.
-</br>Register Data Source in BI Publisher:
-
-</br>Navigate to Reporting Tools > BI Publisher > Data Source.
-</br>Register the data source created by your Application Engine program.
-</br>Design BI Publisher Report Template:
-
-</br>Use tools like Microsoft Word with the BI Publisher plugin to design your report template.
-</br>Define the layout and format of the report, and map the data fields from your data source to the template.
-</br>Upload and Register the Template:
-
-</br>Go to Reporting Tools > BI Publisher > Report Definition.
-</br>Create a new report definition and upload your template.
-</br>Link the data source to the report definition.
-</br>Configure Application Engine to Call BI Publisher:
-
-</br>In your Application Engine program, add a PeopleCode step to call the BI Publisher report.
-</br>Use the XML Publisher API to generate the report. Example PeopleCode snippet:
+</br><b>Step-by-Step Guide for developing BI report with App Engine</b>
+</ol><li>Create Data Source in Application Engine:
+  <ul>
+<li>Develop an Application Engine program to extract data from the PeopleSoft database.</li>
+<li>Use SQL or PeopleCode to fetch the required data and store it in a temporary table or a state record.</li>
+    </ul></li>
+<li>Register Data Source in BI Publisher:
+<ul>
+</li>Navigate to Reporting Tools > BI Publisher > Data Source.
+</li>Register the data source created by your Application Engine program.
+ </ul></li>
+<li>Design BI Publisher Report Template:
+<ul>
+<li>Use tools like Microsoft Word with the BI Publisher plugin to design your report template.</li>
+<li>Define the layout and format of the report, and map the data fields from your data source to the template.</li>
+</ul></li>
+<li>Upload and Register the Template:
+<ul>
+<li>Go to Reporting Tools > BI Publisher > Report Definition.</li>
+<li>Create a new report definition and upload your template.</li>
+<li>Link the data source to the report definition.</li>
+  </ul></li>
+<li>Configure Application Engine to Call BI Publisher:</li>
+<li>In your Application Engine program, add a PeopleCode step to call the BI Publisher report.</li>
+<li>Use the XML Publisher API to generate the report. Example PeopleCode snippet:
 <p>
 </br>import PSXP_RPTDEFNMANAGER:*;
 </br>Local PSXP_RPTDEFNMANAGER:ReportDefn &ReportDefn;
 </br>&ReportDefn = create PSXP_RPTDEFNMANAGER:ReportDefn("REPORT_DEFN_ID");
 </br>&ReportDefn.SetRuntimeDataXML(&XMLDoc);
-</br>&ReportDefn.ProcessReport("", "");
-</br>Schedule and Run the Application Engine:
-</p>
-</br>Schedule the Application Engine program using Process Scheduler.
-</br>Ensure the program runs at the desired intervals to generate and distribute the reports.
+</br>&ReportDefn.ProcessReport("", "");</p></li>
+<li>Schedule and Run the Application Engine:
+<ul><li>Schedule the Application Engine program using Process Scheduler.</li>
+<li>Ensure the program runs at the desired intervals to generate and distribute the reports.</li></ul></li>
 </p>
     </p>
     <p>
+      <h2>PS QUERY: </h2>
       <b>Uses</b></br><ol><li>To Schedule Queries</li><li>To Download Query results</li><li>peoplesoft workflow to determine whome to send emails,forms, work entries</li>
       <li>to Create Data Source for Peoplesoft Nvision Report</li><li>Data Source for BI Publisher</li><li>Data Source for Pivot Grid models</li></ol>
     </p>
