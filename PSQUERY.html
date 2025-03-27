@@ -6,6 +6,40 @@
     <p>
     <b>BI report publisher with SQL Query</b></br>
       <a href="https://www.psoftsearch.com/xml-bi-publisher-tutorial/"> Click here for more details</a>
+<p>
+</br>Step-by-Step Guide
+</br>reate Data Source in Application Engine:
+
+</br>Develop an Application Engine program to extract data from the PeopleSoft database.
+</br>Use SQL or PeopleCode to fetch the required data and store it in a temporary table or a state record.
+</br>Register Data Source in BI Publisher:
+
+</br>Navigate to Reporting Tools > BI Publisher > Data Source.
+</br>Register the data source created by your Application Engine program.
+</br>Design BI Publisher Report Template:
+
+</br>Use tools like Microsoft Word with the BI Publisher plugin to design your report template.
+</br>Define the layout and format of the report, and map the data fields from your data source to the template.
+</br>Upload and Register the Template:
+
+</br>Go to Reporting Tools > BI Publisher > Report Definition.
+</br>Create a new report definition and upload your template.
+</br>Link the data source to the report definition.
+</br>Configure Application Engine to Call BI Publisher:
+
+</br>In your Application Engine program, add a PeopleCode step to call the BI Publisher report.
+</br>Use the XML Publisher API to generate the report. Example PeopleCode snippet:
+<p>
+</br>import PSXP_RPTDEFNMANAGER:*;
+</br>Local PSXP_RPTDEFNMANAGER:ReportDefn &ReportDefn;
+</br>&ReportDefn = create PSXP_RPTDEFNMANAGER:ReportDefn("REPORT_DEFN_ID");
+</br>&ReportDefn.SetRuntimeDataXML(&XMLDoc);
+</br>&ReportDefn.ProcessReport("", "");
+</br>Schedule and Run the Application Engine:
+</p>
+</br>Schedule the Application Engine program using Process Scheduler.
+</br>Ensure the program runs at the desired intervals to generate and distribute the reports.
+</p>
     </p>
     <p>
       <b>Uses</b></br><ol><li>To Schedule Queries</li><li>To Download Query results</li><li>peoplesoft workflow to determine whome to send emails,forms, work entries</li>
