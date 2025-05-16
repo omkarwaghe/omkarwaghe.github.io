@@ -6,9 +6,56 @@
         Ans: By select PSXLATITEM or clearDropDown function we can restrict the translate value from appearing
       </li>
       <li>
-        which is the version currently in used</br>
+        which is the version currently in used<br>
       Ans: PeopleTools 8.61 is currently in used. I have used 5.8 and 5.9 PeopleTools.
       </li>
+      <li> Process groups - PRCSMULTI , HRALL <br> <b>Ans:</b> Process groups are used in PeopleSoft to implement security to access processes and jobs through the process scheduler. Process groups are associated with Permission Lists. </br> Then click on the Process Group Permissions hyperlink located in the Process page.
+to find which permission lists have access to which process groups use the following query: <br> select * 
+from PSAUTHPRCS
+order by CLASSID, PRCSGRP;
+</li>
+ <li> Dynamic views - populating the data from one variable to another  <br> <p><b>Ans:</b> 1.Create one field EDITTABLE, put that into the page where you are going to
+use your prompt table.<br>
+   
+Put the field EDITTABLE into derived/work record DERIVED<br>
+in the record field property of your prompt table field set prompt table as
+%EDITTABLE<br>
+Create a dynamic view contains the fields you want for your prompt table,
+the body of the view like “select 1 from ps_installation”<br>
+in the postbuild peoplecode use DERIVED.EDITTABLE= ‘some record/view’
+(any default view/record you want to use for prompt table)<br>
+In the field change of your drop down create a sql string that will fetch
+values as per the drop down you select (say &SQLstring)<br>
+DERIVED.EDITTABLE=“Dynamic view”<br>
+&rowset.record.promt field.sqltext=&SQLstring
+   </p>
+</li>
+ <li> How to make restartable app engine <br><b>Answer:</b><br>
+   Restart can be enabled/disabled from:
+<br>
+a. Disable Restart check box in the Application Engine Program Properties.
+<br>b. Disable Restart check box in the Configuration Manager profile
+ <br> c. -DR  option in the command line of PSAE.EXE
+<br> If you disabled restart in any of these three places, restart is disabled.
+<br>
+1. AET record need to be SQL table<br>
+2. In program properties Disable restart need to be unchecked<br>
+3. In Config Mngr -> Process Tab ,Disable restart need to be unchecked<br>
+4.The Section type must be Prepare only /Critical Updates<br>
+5.Add order by clause in the sql used<br>
+6. if Temp tables are used better to clear the temp tables after the successful run.<br> </li>
+<li>  What are the ways state records can be used <br> <b>Answer:</b> 1. Storing and Passing Data: <br>
+      State records can store information about the current state of the program's execution, such as whether a specific task has been completed or whether the program is ready to proceed to the next step.
+<br>Enable Restart: If an Application Engine program fails or needs to be interrupted and restarted, the information stored in the state record can be used to resume the program from the point at which it was interrupted.
+  <br>
+ </li>
+<li>  On Error menthod in application Engine <br> Mentioned in the app engine step</li>
+<li> call app engine on the page which are the options  <b>Answer:</b>1. CallAppEngine(applid[, statereclist, processinstance, allowcommit<br>2. Using the Command Line to Invoke Application Engine Programs, Press Enter to expand
+<br> </li>
+<li>  DoSave() and doSavenow() method 
+<br><b> Answer:</b>unlike DoSave(), the DoSaveNow() saves the component without waiting for any other events to complete.
+<br>If you give a call to DoSaveNow(), it first saves the component immediately and then continues with other actions.
+</li>
     </ol>
   </body>
 </html>
