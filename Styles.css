@@ -38,7 +38,9 @@ main {
 
 #blog-posts {
     display: flex;
-    flex-wrap: wrap;
+flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
 }
 
 .post {
@@ -72,10 +74,3 @@ table td {
    border:1px solid #000;
 }
 
-section {
-display: flex;
-flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-
-}
