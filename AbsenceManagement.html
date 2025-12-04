@@ -1,0 +1,31 @@
+Step-by-Step Configuration Process
+1.	Define Absence Types and Reasons
+o	Absence Types are broad categories (e.g., Illness, Vacation, Maternity Leave).
+o	Absence Reasons provide further classification within a type (e.g., cold, flu under Illness).
+o	Navigation: Set Up HRMS, Product Related, Global Payroll & Absence Management, Absence Management, Absence Elements, Absence Type.
+2.	Define Absence Entitlement Elements
+o	These elements define how much paid time off an employee receives (e.g., 15 vacation days per year) and the rules for accrual (frequency, automatic adjustments, etc.).
+o	Navigation: Set Up HRMS, Product Related, Global Payroll & Absence Management, Absence Management, Absence Elements, Entitlement.
+3.	Define Absence Take Elements
+o	Take elements define the rules for using the entitled time off. They link to an Absence Type and one or more Entitlement Elements.
+o	Key rules defined here include: 
+	Eligibility requirements (e.g., employed for three months before using leave).
+	Handling of insufficient entitlement (negative balance, unpaid time, redirect to another take element).
+	Linking to earning and deduction elements for payroll processing.
+	Priority for overlapping absences on the same day.
+o	Navigation: Set Up HRMS, Product Related, Global Payroll & Absence Management, Absence Management, Absence Elements, Take.
+4.	Define Absence Self-Service Rules (Optional but Recommended)
+o	Configure rules to enable employees and managers to request absences, view balances, and forecast entitlements via self-service pages.
+o	This includes: 
+	Specifying which take elements are available for self-service requests.
+	Defining country-specific display and entry rules (e.g., partial day options, date rules, history display).
+	Setting up the Approval Framework (AWE) process IDs for routing requests for approval.
+o	Navigation: Set Up HRMS, Product Related, Global Payroll & Absence Management, Absence Management, Country Take.
+5.	Add Absence Elements to Eligibility Groups and Process Lists
+o	Assign the configured elements (entitlement and take) to the appropriate Element Groups and Eligibility Groups to make them available to the correct payees.
+o	Add the elements to an Absence Process List, which defines the order in which elements are resolved during the absence processing (payroll run).
+6.	Set Up Calendars and Run Absence Processes
+o	Tie the components together using Absence Calendars, which define the period for processing and link to a specific pay group.
+o	Run the batch processes (Entitlement process, Take process) to process absences, update balances, and generate positive input for payroll. 
+o	 
+http://peoplesoftconcept.blogspot.com/2015/02/a-quick-walkthrough-of-peoplesoft.html
