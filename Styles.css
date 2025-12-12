@@ -1,0 +1,288 @@
+
+/* ========== Base Reset & Theme ========== */
+:root {
+  --bg: #f4f4f4;
+  --text: #111827;
+  --muted: #6b7280;
+  --card-bg: #ffffff;
+  --border: #e5e7eb;
+  --brand: #2563eb;       /* primary accent */
+  --radius: 12px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --container: 1100px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;              /* base */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--text);
+  background-color: var(--bg);
+
+  /* remove full-page centering to allow header/footer & natural flow */
+  display: block;
+}
+
+/* Utility container usable across pages */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Make images and embeds responsive by default */
+img,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Links */
+a {
+  color: var(--brand);
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* ========== Header (works on all pages) ========== */
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+header .site-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+header nav ul li {
+  /* inline is fragile—use flex item */
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+header nav ul li a:hover,
+header nav ul li a:focus {
+  background: rgba(255,255,255,0.12);
+}
+
+/* Optional: make nav stack on small screens */
+@media (max-width: 640px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ========== Main ========== */
+main {
+  padding: 20px 0;
+}
+
+/* ========== Posts/Grid Section ========== */
+/* Use a class that can be reused anywhere, not just #blog-posts */
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+/* 3 columns on large, 2 on tablet, 1 on mobile */
+.grid.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 992px) {
+  .grid.cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .grid.cols-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card/Post styling */
+.card,
+.post {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 16px;
+}
+
+.post h2,
+.card h3 {
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+/* If you keep #blog-posts specifically, apply grid there too */
+#blog-posts {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+}
+@media (max-width: 992px) {
+  #blog-posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  #blog-posts {
+    grid-template-columns: 1fr;
+  }
+}
+/* Remove width calc (it was incorrect). Grid handles widths. */
+.post {
+  margin: 0; /* grid gap is enough */
+}
+
+/* ========== Footer ========== */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 12px 0;
+}
+
+/* ========== Tables (responsive) ========== */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;          /* scroll on small screens */
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #000;
+  background: #fff;
+}
+
+table th,
+table td {
+  border: 1px solid #000;
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;       /* reduces wrapping; remove if you prefer wrapping */
+}
+
+table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+
+/* ========== Forms (general) ========== */
+input, select, textarea, button {
+  font: inherit;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: var(--brand);
+  color: #fff;
+  cursor: pointer;
+}
+button:hover {
+  filter: brightness(1.05);
+}
+
+/* ========== Helpers & Utilities ========== */
+.center {
+  display: grid;
+  place-items: center;
+}
+.mt-0 { margin-top: 0 !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.mt-16 { margin-top: 16px !important; }
+.mb-16 { margin-bottom: 16px !important; }
+.p-0 { padding: 0 !important; }
+.p-16 { padding: 16px !important; }
+
+/* ========== Optional Dark Mode (auto) ========== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b1220;
+    --text: #e5e7eb;
+    --muted: #9aa3af;
+    --card-bg: #121a2a;
+    --border: #1f2937;
+  }
+  header,
+  footer {
+    background: #0f172a;
+  }
+  table {
+    background: var(--card-bg);
+  }
+  table tr:nth-child(even) {
+    background: #0f1625;
+  }
+}
+
+/* ========== Print Styles (optional) ========== */
+@media print {
+  header, footer {
+    display: none;
+  }
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+  a {
+    text-decoration: underline;
+  }
+}
