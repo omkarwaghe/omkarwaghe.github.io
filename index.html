@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Page</title>
+  <style>
+    /* --- Base & Variables --- */
+    :root {
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --surface-2: #f0f2f7;
+      --text: #0b0f19;
+      --muted: #5b5f6b;
+      --primary: #1f74ff;
+
+      --space-1: .25rem;
+      --space-2: .5rem;
+      --space-3: .75rem;
+      --space-4: 1rem;
+      --space-5: 1.5rem;
+      --space-6: 2rem;
+
+      --radius-1: 10px;
+      --radius-2: 14px;
+
+      --shadow-1: 0 4px 12px rgba(0,0,0,.08);
+      --shadow-2: 0 10px 24px rgba(0,0,0,.12);
+    }
+
+    /* Dark mode (auto) */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b0f19;
+        --surface: #111827;
+        --surface-2: #0f172a;
+        --text: #f5f7fb;
+        --muted: #a0a7b4;
+        --shadow-1: 0 4px 12px rgba(0,0,0,.35);
+        --shadow-2: 0 10px 24px rgba(0,0,0,.5);
+      }
+    }
+
+    /* Reset + base */
+    *, *::before, *::after { box-sizing: border-box; }
+    html:focus-within { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    /* Layout */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: var(--space-6) var(--space-5);
+    }
+    header {
+      text-align: center;
+      margin-bottom: var(--space-6);
+    }
+    header h1 {
+      margin: 0 0 var(--space-2);
+      font-size: clamp(1.5rem, 1.1rem + 2vw, 2.25rem);
+      letter-spacing: 0.2px;
+    }
+    header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(0.95rem, 0.9rem + 0.5vw, 1.1rem);
+    }
+
+    /* Responsive grid of cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--space-5);
+      align-items: stretch;
+    }
+
+    /* Card */
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      background: var(--surface);
+      border-radius: var(--radius-2);
+      box-shadow: var(--shadow-1);
+      padding: var(--space-5);
+      text-decoration: none; /* <a> card becomes link without underline */
+      color: inherit;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+      outline: none;
+      position: relative;
+      isolation: isolate;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-2);
+    }
+    .card:focus-visible {
+      box-shadow: 0 0 0 3px color-mix(in oklab, var(--primary) 50%, white 50%), var(--shadow-2);
+      transform: translateY(-2px);
+    }
+
+    /* Media area keeps images proportional */
+    .card__media {
+      border-radius: var(--radius-1);
+      background: var(--surface-2);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      aspect-ratio: 16 / 9; /* consistent media box */
+    }
+    .card__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;  /* keep logos intact */
+    }
+
+    .card__title {
+      font-weight: 700;
+      font-size: clamp(1.05rem, 1rem + 0.4vw, 1.25rem);
+    }
+    .card__desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Reduce motion for accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; animation: none !important; }
+    }
+
+    /* Simple footer */
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: var(--space-6) var(--space-5);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>My Skills & Projects</h1>
+      <p>Explore implementations, development work, and tools I use.</p>
+    </header>
+
+    <main>
+      <section class="card-grid" aria-label="Cards">
+        <!-- Peoplesoft -->
+        peoplesoft.html
+          <div class="card__media">
+            <img
+              loading="lazy"
+              alt="Oracle PeopleSoft logo"
+              src="data:image/png;base64,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     <p class="card__desc">HCM, Finance, integration and portal configurations.</p>
+        </a>
+
+        <!-- Oracle Cloud Implementation -->
+        OracleCloud.html
+          <div class="card__media">
+            <img loading="lazy" alt="Placeholder image 2" src="https://via.placeholder.com/  <h3 class="card__title">Oracle Cloud Implementation</h3>
+          <p class="card__desc">End‑to‑end configuration, migration, and deployment pipelines.</p>
+        </a>
+
+        <!-- SQL -->
+        SQL.html
+          <div class="card__media">
+            https://via.placeholder.com/300x170?text=SQL
+          </div>
+          <h3 class="card__title">SQL</h3>
+          <p class="card__desc">Queries, performance tuning, and reporting across RDBMS.</p>
+        </a>
+
+        <!-- UI Development -->
+        #
+          <div class="card__media">
+            https://via.placeholder.com/300x170?text=UI
+          </div>
+          <h3 class="card__title">UI Development</h3>
+          <p class="card__desc">Modern, responsive front‑end with accessibility and design systems.</p>
+        </a>
+
+        <!-- Flutter Mobile Development -->
+        #
+          <div class="card__media">
+            <img loading="lazy" alt="Placeholder image 3" src="https://via.placeholder.com/300x170"card__title">Flutter Mobile Development</h3>
+          <p class="card__desc">Cross‑platform apps with state management and native integrations.</p>
+        </a>
+
+        <!-- My Village Development -->
+        #
+          <div class="card__media">
+            <img loading="lazy" alt="Placeholder image 3" src="https://via.placeholder.com/300x170?ss="card__title">My Village Development</h3>
+          <p class="card__desc">Local infrastructure, digitization, and community tooling.</p>
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      © 2025 Omkar Kishor WagheOS · Built with love and clean CSS
+    </footer>
+  </div>
+</body>
+</html>
