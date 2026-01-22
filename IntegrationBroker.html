@@ -1,4 +1,5 @@
 <html>
+  <body>
 <ul>Integration Broker Architecture</ul>
   <p>Integration broker consist of two subsystems 1.Integration Gateway 2.Integration Engine<br>
     Integration Gatway resides in web server and Integration engine in App server<br>
@@ -11,6 +12,30 @@
   </p>
   
   <ul>Asynchronous</ul>
-
   import PS_PT:Integration:IRequestHandler;
+
+ <b>Key Configuration files</b>   
+  <li>1. Integration Gateway Properties - In the web server, File system path be like </br>
+    {PIA_HOME}/webserv/{DOMAIN}/applications/peoplesoft/PSIGW.war/WEB-INF/integrationGateway.properties
+  </li>
+   <li>
+     2. psappsrv.cfg - App server configuration <br>
+     {PS_HOME}/appserv/{DOMAIN}/psappsrv.cfg
+   </li> 
+<p>  <b>Part of Integration broker API creation</b>
+    <li>
+      Create Document
+    </li>
+    <li>
+      Create Messages
+    </li>
+    <li>
+      Create Service
+    </li>
+    <li>
+      Create Service Operation
+    </li>
+  </p>
+
+  </body>
 </html>
