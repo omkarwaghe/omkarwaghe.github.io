@@ -23,7 +23,7 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
 }
-
+/*  ====setting a body ==*/
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -38,6 +38,14 @@ body {
   margin: 0 auto;
   padding: 0 16px;
 }
+
+.card-container {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-around;
+       align-items: center;
+       gap: 2px;
+     }
 
 img,
 video,
