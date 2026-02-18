@@ -313,7 +313,7 @@ button:hover {
 
 /* Uniform image handling */
 .skill-card img {
-  width: 100%;
+  width: 150px;
   height: 130px;              /* consistent */
   object-fit: contain;         /* prevents stretching */
   border-radius: 8px;
