@@ -288,7 +288,7 @@ button:hover {
   
 /* ========== Uniform Cards for Skill Icons ========== */
 .skill-card {
-  background: var(--card-bg);
+  background:  #FFFFFF;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 16px;
