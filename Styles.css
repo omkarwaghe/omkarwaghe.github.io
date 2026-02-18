@@ -296,7 +296,7 @@ button:hover {
   cursor: pointer;
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
   box-shadow: var(--shadow-sm);
-
+ border: 1px solid var(--border);
   /* Uniform height */
   height: 250px;
 
@@ -317,6 +317,7 @@ button:hover {
   height: 130px;              /* consistent */
   object-fit: contain;         /* prevents stretching */
   border-radius: 8px;
+   border: 1px solid var(--border);
 }
 
 /* Card title */
@@ -325,5 +326,6 @@ button:hover {
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--text);
+   border: 1px solid var(--border);
 }
 
